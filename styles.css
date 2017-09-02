@@ -1,6 +1,32 @@
+#app {
+  text-align: center;
+}
+
 #canvas {
-  width: 600px;
+  margin: 0 auto;
+  width: 90%;
   padding: 200px 20px;
   text-align: center;
   border: 1px solid #333;
+}
+
+.section {
+  margin: 200px auto;
+}
+
+.inner {
+  background: red;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  margin: 10px 0;
+}
+
+.available .inner {
+  background: green;
+}
+
+.nearby .inner:after {
+  content: 'nearby';
+  margin-left: 10px;
 }
