@@ -7,22 +7,7 @@
   </head>
   <body>
     <div id="app">
-      <h2>{{ greet('evening') }}</h2>
-      <a v-bind:href="website">My Portfolio</a>
-      <p v-html="websiteTag"></p>
-      <input v-bind:value="name" type="text">
-      <div>
-        <p>My age is {{ age }}</p>
-        <button v-on:click="subtract(1)">-</button>
-        <button v-on:click="add(1)">+</button>
-        <button v-on:dblclick="subtract(10)">-</button>
-        <button v-on:dblclick="add(10)">+</button>
-        
-        <div v-on:mousemove="updateXY" id="canvas">
-          {{ x }},
-          {{ y }}
-        </div>
-      </div>
+      
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="/app.js"></script>
