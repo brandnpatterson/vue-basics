@@ -1,6 +1,9 @@
-#canvas {
-  width: 600px;
-  padding: 200px 20px;
+#app {
   text-align: center;
-  border: 1px solid #333;
+}
+li {
+  list-style-type: none;
+}
+.section {
+  margin: 200px auto;
 }
