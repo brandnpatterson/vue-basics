@@ -1,9 +1,32 @@
-#app {
+.section {
   text-align: center;
 }
-li {
-  list-style-type: none;
+
+.bag {
+  width: 200px;
+  height: 450px;
+  margin: 0 auto 25px;
+  background: url('img/bag.png') center no-repeat;
+  background-size: 80%;
 }
-.section {
-  margin: 200px auto;
+
+.burst {
+  background: url('img/bag-burst.png') center no-repeat;
+  background-size: 80%;
+}
+
+.bag-health {
+  width: 200px;
+  border: 2px solid black;
+  margin: 0 auto 20px;
+}
+
+.bag-health div {
+  height: 20px;
+  background: crimson;
+}
+
+.controls {
+  width: 120px;
+  margin: 0 auto;
 }

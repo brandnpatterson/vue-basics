@@ -2,17 +2,24 @@
 new Vue({
   el: '#app',
   data: {
-    characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
-    ninjas: [
-      { name: 'Ryu', age: 25 },
-      { name: 'Shen', age: 26 },
-      { name: 'Akali', age: 18 }
-    ]
+    health: 100,
+    ended: false,
+    netNinja: 'https://www.youtube.com/watch?v=WjfpQlVem-8'
   },
   methods: {
+    punch () {
+      this.health -= 10;
 
+      if (this.health <= 0) {
+        this.ended = true;
+      }
+    },
+    restart () {
+      this.health = 100;
+      this.ended = false;
+    }
   },
   computed: {
-    
+
   }
 });

@@ -8,28 +8,26 @@
   <body>
     <div id="app">
       <div class="section">
-        <h2>Looping through lists</h2>
-        <ul>
-          <li v-for="character in characters">
-            {{ character }}
-          </li>
-        </ul>
-        <ul>
-          <li v-for="(ninja, index) in ninjas">
-            {{ index }}. {{ ninja.name }} - {{ ninja.age }}
-          </li>
-        </ul>
-        <div>
-          <template v-for="(ninja, index) in ninjas">
-            <h3>{{ index }}. {{ninja.name}}</h3>
-            <p> {{ ninja.age }}</p>
-          </template>
-          <template v-for="ninja in ninjas">
-            <div v-for="(val, key) in ninja">
-              {{ key }}: {{ val }}
-            </div>
-          </template>
+        <h2>Punch!</h2>
+
+        <!-- bag image -->
+        <div v-bind:class="{burst: ended}" class="bag">
+
         </div>
+        <!-- bag health -->
+        <div class="bag-health">
+          <div v-bind:style="{ width: health + '%' }">
+
+          </div>
+        </div>
+        <!-- game controls -->
+        <div class="controls">
+          <button v-on:click="punch" v-show="!ended">Punch</button>
+          <button v-on:click="restart">Restart</button>
+        </div>
+        <br />
+        <br />
+        <a href="netNinja">The Net Ninja</a>
       </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
