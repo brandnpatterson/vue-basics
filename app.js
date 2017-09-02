@@ -1,16 +1,32 @@
 // vue instance
-new Vue({
-  el: '#app',
+var one = new Vue({
+  el: '#app-one',
   data: {
-    name: 'Brandon',
-    age: 29,
-    job: 'Front End Web Developer',
-    website: 'http://www.brandnpatterson.com',
-    websiteTag: '<a href="http://www.brandnpatterson.com">My Portfolio</a>'
+    title: 'Vue App One'
   },
   methods: {
-    greet: function (time) {
-      return 'Good ' + time + ' ' + this.name + '!';
+
+  },
+  computed: {
+    greet: function () {
+      return 'Hello from app one';
+    }
+  }
+});
+
+var two = new Vue({
+  el: '#app-two',
+  data: {
+    title: 'Vue App Two'
+  },
+  methods: {
+    changeTitle: function () {
+      one.title === 'Vue App One' ? one.title = 'Vue App New' : one.title = 'Vue App One';
+    }
+  },
+  computed: {
+    greet: function () {
+      return 'Hello from app two';
     }
   }
 });

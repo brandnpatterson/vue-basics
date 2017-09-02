@@ -7,14 +7,14 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="app">
-      <h2>{{ greet('evening') }}</h2>
-      <a v-bind:href="website">My Portfolio</a>
-      <p v-html="websiteTag"></p>
-      <p>My age is {{ age }}</p>
-      <button>-</button>
-      <button>+</button>
-      <input v-bind:value="name" type="text">
+    <div id="app-one">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+    </div>
+    <div id="app-two">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+      <button v-on:click="changeTitle">Change App One Title</button>
     </div>
     <script src="/app.js"></script>
   </body>
